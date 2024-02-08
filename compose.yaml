@@ -1,0 +1,17 @@
+
+
+services:
+  mysql:
+    image: 'mysql:latest'
+    environment:
+      - MYSQL_DATABASE=zebaze
+      - MYSQL_PASSWORD=test
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_USER=test
+    volumes:
+      - dbmysql:/var/lib/mysql
+    ports:
+      - 3306:3306
+
+volumes:
+  dbmysql:
